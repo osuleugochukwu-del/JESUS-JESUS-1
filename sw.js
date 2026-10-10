@@ -4,6 +4,7 @@ const LOCAL=[
   './',
   './index.html',
   './ctrader-callback.html',
+
   './assets/styles.css',
   './assets/master-recovery.css',
   './assets/final-upgrade.css',
@@ -16,11 +17,15 @@ const LOCAL=[
   './src/market-feed-adapter.js',
   './src/ctrader-feed-adapter.js',
   './src/ctrader-oauth-callback.js',
+
   './src/app.js',
   './src/master-recovery.js',
   './src/final-upgrade.js',
   './src/v11-correction.js',
   './src/live-ready-upgrade.js',
+
+  './src/dense-pan-fix.js',
+
   './src/native-v27-renderer.js',
   './src/native-chart.js',
   './src/native-v3-core.js',
@@ -31,6 +36,7 @@ const LOCAL=[
   './src/drawings.js',
   './src/state.js',
   './src/utils.js',
+
   './src/indicator-security.js',
   './src/alert-client.js',
   './src/replay-client.js',
@@ -47,24 +53,72 @@ const LOCAL=[
 
 self.addEventListener('install',event=>
   event.waitUntil(
-    caches.open(CACHE).then(cache=>cache.addAll(LOCAL)).then(()=>self.skipWaiting())
+    caches
+      .open(CACHE)
+      .then(cache=>cache.addAll(LOCAL))
+      .then(()=>self.skipWaiting())
   )
 );
 
 self.addEventListener('activate',event=>
   event.waitUntil(
-    caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('trade-avata-chart-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())
+    caches
+      .keys()
+      .then(keys=>
+        Promise.all(
+          keys
+            .filter(
+              key=>
+                key.startsWith('trade-avata-chart-') &&
+                key!==CACHE
+            )
+            .map(key=>caches.delete(key))
+        )
+      )
+      .then(()=>self.clients.claim())
   )
 );
 
 self.addEventListener('fetch',event=>{
+
   if(event.request.method!=='GET')return;
+
   const url=new URL(event.request.url);
-  if(url.origin!==self.location.origin)return; // Never cache Firebase/cTrader OAuth or remote credentials/tokens.
+
+  if(url.origin!==self.location.origin)return;
+
   event.respondWith(
-    fetch(event.request,{cache:'no-store'}).then(response=>{
-      if(response?.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy)).catch(()=>{});}
-      return response;
-    }).catch(async()=>await caches.match(event.request)||caches.match('./index.html'))
+
+    fetch(
+      event.request,
+      {
+        cache:'no-store'
+      }
+    )
+      .then(response=>{
+
+        if(response?.ok){
+
+          const copy=response.clone();
+
+          caches
+            .open(CACHE)
+            .then(cache=>
+              cache.put(
+                event.request,
+                copy
+              )
+            )
+            .catch(()=>{});
+        }
+
+        return response;
+      })
+
+      .catch(
+        async()=>
+          await caches.match(event.request) ||
+          caches.match('./index.html')
+      )
   );
 });
