@@ -1,4 +1,4 @@
-const CACHE='trade-avata-chart-v11-1-correction-v11-2-live-ready-r3';
+const CACHE='trade-avata-chart-v11-1-correction-v11-2-live-ready-r3-dense-pan1';
 
 const LOCAL=[
   './',
