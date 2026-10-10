@@ -1,0 +1,24 @@
+WHEN CTRADER APPROVES TRADE AVATA — SIMPLE ACTIVATION CHECKLIST
+===============================================================
+
+You should NOT need to redesign the Trade Avata frontend again.
+
+What you will do later:
+
+1. Get the Trade Avata cTrader Open API Client ID and Client Secret.
+2. Authorize the dedicated cTrader account that will supply the public Trade Avata market feed.
+3. Deploy the already-included "gateway" folder to the secure cloud/container service.
+4. Put the private cTrader values in that cloud service's Secret/Environment settings.
+   Do NOT paste them into the public website or GitHub Pages JavaScript.
+5. Tell cTrader that Trade Avata's callback page is:
+   https://YOUR-TRADE-AVATA-SITE/ctrader-callback.html
+6. Copy the deployed gateway's PUBLIC https:// address.
+7. Open src/live-ready-config.js and put that one public address in TRADE_AVATA_BACKEND_HTTP.
+8. Deploy the site and verify the status changes from FEED NOT CONFIGURED to CONNECTING/LIVE.
+
+That is configuration/deployment of the live source, not another chart/UI redesign.
+
+The included gateway already contains the live quote, history, reconnect, token refresh,
+personal account, position/order/history, equity/P&L and journal-event wiring.
+It also includes permanent TA ID allocation, secure Owner claim bootstrap, OAuth state validation,
+and WebSocket/request safety limits.

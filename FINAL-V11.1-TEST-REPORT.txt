@@ -1,0 +1,641 @@
+TRADE AVATA V11.1 CORRECTION TEST REPORT
+Generated: 2026-10-09
+
+
+> trade-avata-chart@11.1.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: deterministic bars have OHLC integrity
+ok 1 - deterministic bars have OHLC integrity
+  ---
+  duration_ms: 3.285042
+  type: 'test'
+  ...
+# Subtest: heikin ashi preserves length and valid ranges
+ok 2 - heikin ashi preserves length and valid ranges
+  ---
+  duration_ms: 0.674165
+  type: 'test'
+  ...
+# Subtest: niceStep chooses human round intervals
+ok 3 - niceStep chooses human round intervals
+  ---
+  duration_ms: 0.986534
+  type: 'test'
+  ...
+# Subtest: renko and range builders return data
+ok 4 - renko and range builders return data
+  ---
+  duration_ms: 3.751364
+  type: 'test'
+  ...
+# Subtest: V11 final upgrade loads after protected master recovery layer
+ok 5 - V11 final upgrade loads after protected master recovery layer
+  ---
+  duration_ms: 1.155959
+  type: 'test'
+  ...
+# Subtest: V11 guest access policy is 10 minute prompt, 40 minute gate, 24 hour reset
+ok 6 - V11 guest access policy is 10 minute prompt, 40 minute gate, 24 hour reset
+  ---
+  duration_ms: 0.346882
+  type: 'test'
+  ...
+# Subtest: professional glass UI, adjustable opacity and soft light theme are present
+ok 7 - professional glass UI, adjustable opacity and soft light theme are present
+  ---
+  duration_ms: 0.632462
+  type: 'test'
+  ...
+# Subtest: order ticket includes professional order types, prepare trade and DOM adapter surface
+ok 8 - order ticket includes professional order types, prepare trade and DOM adapter surface
+  ---
+  duration_ms: 0.500272
+  type: 'test'
+  ...
+# Subtest: round-number price level presets cover 500, 100, 50 and custom levels
+ok 9 - round-number price level presets cover 500, 100, 50 and custom levels
+  ---
+  duration_ms: 0.198188
+  type: 'test'
+  ...
+# Subtest: indicator automatic labels and full stochastic controls are present
+ok 10 - indicator automatic labels and full stochastic controls are present
+  ---
+  duration_ms: 1.027867
+  type: 'test'
+  ...
+# Subtest: stochastic smoothing exposes valid K and D series
+ok 11 - stochastic smoothing exposes valid K and D series
+  ---
+  duration_ms: 1.203521
+  type: 'test'
+  ...
+# Subtest: TA ID, owner/free architecture and hidden future plans are wired
+ok 12 - TA ID, owner/free architecture and hidden future plans are wired
+  ---
+  duration_ms: 0.243777
+  type: 'test'
+  ...
+# Subtest: settings sync and watchlist favorite architecture are present
+ok 13 - settings sync and watchlist favorite architecture are present
+  ---
+  duration_ms: 0.31917
+  type: 'test'
+  ...
+# Subtest: expanded multi-chart layouts include six and eight chart grids
+ok 14 - expanded multi-chart layouts include six and eight chart grids
+  ---
+  duration_ms: 0.448014
+  type: 'test'
+  ...
+# Subtest: full native production surface can construct render and round-trip coordinates
+ok 15 - full native production surface can construct render and round-trip coordinates
+  ---
+  duration_ms: 69.895463
+  type: 'test'
+  ...
+# Subtest: full native surface handles Renko construction and pane guide lines
+ok 16 - full native surface handles Renko construction and pane guide lines
+  ---
+  duration_ms: 1.996454
+  type: 'test'
+  ...
+# Subtest: professional indicator library contains core families
+ok 17 - professional indicator library contains core families
+  ---
+  duration_ms: 0.953454
+  type: 'test'
+  ...
+# Subtest: replay truncates indicator series at replay cursor
+ok 18 - replay truncates indicator series at replay cursor
+  ---
+  duration_ms: 4.141
+  type: 'test'
+  ...
+# Subtest: Full Native restores the approved shell price-axis footprint
+ok 19 - Full Native restores the approved shell price-axis footprint
+  ---
+  duration_ms: 2.04062
+  type: 'test'
+  ...
+# Subtest: Compact Native axis labels fit inside the restored shell
+ok 20 - Compact Native axis labels fit inside the restored shell
+  ---
+  duration_ms: 0.779874
+  type: 'test'
+  ...
+# Subtest: Construction menu cannot render a null period label
+ok 21 - Construction menu cannot render a null period label
+  ---
+  duration_ms: 0.176766
+  type: 'test'
+  ...
+# Subtest: market snapshot exposes structured analysis fields
+ok 22 - market snapshot exposes structured analysis fields
+  ---
+  duration_ms: 4.448182
+  type: 'test'
+  ...
+# Subtest: heat map and screener cover supplied symbols
+ok 23 - heat map and screener cover supplied symbols
+  ---
+  duration_ms: 5.1578
+  type: 'test'
+  ...
+# Subtest: market sentiment percentages form a complete distribution
+ok 24 - market sentiment percentages form a complete distribution
+  ---
+  duration_ms: 1.613397
+  type: 'test'
+  ...
+# Subtest: AI context contains structured market and indicator data
+ok 25 - AI context contains structured market and indicator data
+  ---
+  duration_ms: 0.511469
+  type: 'test'
+  ...
+# Subtest: master recovery is wired without changing the approved shell entry points
+ok 26 - master recovery is wired without changing the approved shell entry points
+  ---
+  duration_ms: 3.205753
+  type: 'test'
+  ...
+# Subtest: hardcoded signal badges and redundant chart style selector are removed
+ok 27 - hardcoded signal badges and redundant chart style selector are removed
+  ---
+  duration_ms: 0.388014
+  type: 'test'
+  ...
+# Subtest: AI conversation is not automatically granted to admin role
+ok 28 - AI conversation is not automatically granted to admin role
+  ---
+  duration_ms: 0.307783
+  type: 'test'
+  ...
+# Subtest: pointer, mobile drawing and chart controls are present
+ok 29 - pointer, mobile drawing and chart controls are present
+  ---
+  duration_ms: 0.361304
+  type: 'test'
+  ...
+# Subtest: indicator attached list and Eye Edit Remove controls are present
+ok 30 - indicator attached list and Eye Edit Remove controls are present
+  ---
+  duration_ms: 0.266691
+  type: 'test'
+  ...
+# Subtest: risk reward, oscillator guides, replay trading, themes and vault are present
+ok 31 - risk reward, oscillator guides, replay trading, themes and vault are present
+  ---
+  duration_ms: 0.377878
+  type: 'test'
+  ...
+# Subtest: v9.3 delegates construction switching to the single app transition controller
+ok 32 - v9.3 delegates construction switching to the single app transition controller
+  ---
+  duration_ms: 0.348464
+  type: 'test'
+  ...
+# Subtest: Heiken Ashi and all period choices use setConstruction without double rebuild calls
+ok 33 - Heiken Ashi and all period choices use setConstruction without double rebuild calls
+  ---
+  duration_ms: 0.263677
+  type: 'test'
+  ...
+# Subtest: Renko Time and Renko Pips remain separate construction modes
+ok 34 - Renko Time and Renko Pips remain separate construction modes
+  ---
+  duration_ms: 0.447994
+  type: 'test'
+  ...
+# Subtest: construction menu opens on the active construction and tabs do not mutate the chart
+ok 35 - construction menu opens on the active construction and tabs do not mutate the chart
+  ---
+  duration_ms: 0.512682
+  type: 'test'
+  ...
+# Subtest: period rows restore favourite stars for candle Heiken Renko and range choices
+ok 36 - period rows restore favourite stars for candle Heiken Renko and range choices
+  ---
+  duration_ms: 0.309926
+  type: 'test'
+  ...
+# Subtest: native price scale owns last/bid/ask labels and candle countdown data
+ok 37 - native price scale owns last/bid/ask labels and candle countdown data
+  ---
+  duration_ms: 5.057559
+  type: 'test'
+  ...
+# Subtest: oscillator panes enforce fixed 0-100 range and custom guides
+ok 38 - oscillator panes enforce fixed 0-100 range and custom guides
+  ---
+  duration_ms: 1.392225
+  type: 'test'
+  ...
+# Subtest: visible ranges cannot be dragged completely away from all chart data
+ok 39 - visible ranges cannot be dragged completely away from all chart data
+  ---
+  duration_ms: 6.652939
+  type: 'test'
+  ...
+# Subtest: small mobile panes use their real dimensions rather than a phantom minimum canvas
+ok 40 - small mobile panes use their real dimensions rather than a phantom minimum canvas
+  ---
+  duration_ms: 0.284057
+  type: 'test'
+  ...
+# Subtest: indicator source selection changes source values and stochastic %D waits for real %K samples
+ok 41 - indicator source selection changes source values and stochastic %D waits for real %K samples
+  ---
+  duration_ms: 0.489006
+  type: 'test'
+  ...
+# Subtest: percent and indexed scales label transformed values instead of raw prices
+ok 42 - percent and indexed scales label transformed values instead of raw prices
+  ---
+  duration_ms: 0.653754
+  type: 'test'
+  ...
+# Subtest: full native renderer is the only production chart engine
+ok 43 - full native renderer is the only production chart engine
+  ---
+  duration_ms: 8.275326
+  type: 'test'
+  ...
+# Subtest: native chart owns axes coordinates crosshair panes and screenshot
+ok 44 - native chart owns axes coordinates crosshair panes and screenshot
+  ---
+  duration_ms: 0.357808
+  type: 'test'
+  ...
+# Subtest: native chart owns candles bars lines area histogram and Renko bodies
+ok 45 - native chart owns candles bars lines area histogram and Renko bodies
+  ---
+  duration_ms: 0.39877
+  type: 'test'
+  ...
+# Subtest: native chart owns desktop and mobile interaction primitives
+ok 46 - native chart owns desktop and mobile interaction primitives
+  ---
+  duration_ms: 0.371009
+  type: 'test'
+  ...
+# Subtest: native chart supports oscillator pane resizing and guides
+ok 47 - native chart supports oscillator pane resizing and guides
+  ---
+  duration_ms: 0.125639
+  type: 'test'
+  ...
+# Subtest: Chart Quality AI remains owner-only
+ok 48 - Chart Quality AI remains owner-only
+  ---
+  duration_ms: 0.207512
+  type: 'test'
+  ...
+# Subtest: quality monitor measures native paint frame rate and errors
+ok 49 - quality monitor measures native paint frame rate and errors
+  ---
+  duration_ms: 0.126501
+  type: 'test'
+  ...
+# Subtest: quality AI retains local fallback and backend quality channel
+ok 50 - quality AI retains local fallback and backend quality channel
+  ---
+  duration_ms: 0.250136
+  type: 'test'
+  ...
+# Subtest: Native v3 core identifies the full native build
+ok 51 - Native v3 core identifies the full native build
+  ---
+  duration_ms: 1.229099
+  type: 'test'
+  ...
+# Subtest: Native v3 logical X coordinates round-trip without chart-library coordinates
+ok 52 - Native v3 logical X coordinates round-trip without chart-library coordinates
+  ---
+  duration_ms: 0.576568
+  type: 'test'
+  ...
+# Subtest: Native v3 price coordinates round-trip
+ok 53 - Native v3 price coordinates round-trip
+  ---
+  duration_ms: 0.365019
+  type: 'test'
+  ...
+# Subtest: Native v3 auto price range contains all visible OHLC values
+ok 54 - Native v3 auto price range contains all visible OHLC values
+  ---
+  duration_ms: 0.250617
+  type: 'test'
+  ...
+# Subtest: Native v3 vertical scaling preserves the selected anchor price
+ok 55 - Native v3 vertical scaling preserves the selected anchor price
+  ---
+  duration_ms: 0.312741
+  type: 'test'
+  ...
+# Subtest: Native v3 timeframe price-anchor recovery keeps price in the requested zone
+ok 56 - Native v3 timeframe price-anchor recovery keeps price in the requested zone
+  ---
+  duration_ms: 0.206661
+  type: 'test'
+  ...
+# Subtest: Native v3 generates usable price and time ticks
+ok 57 - Native v3 generates usable price and time ticks
+  ---
+  duration_ms: 0.258839
+  type: 'test'
+  ...
+# Subtest: Native v3 Home spacing remains readable
+ok 58 - Native v3 Home spacing remains readable
+  ---
+  duration_ms: 0.128483
+  type: 'test'
+  ...
+# Subtest: Native v3 oscillator range includes guides and values
+ok 59 - Native v3 oscillator range includes guides and values
+  ---
+  duration_ms: 0.701635
+  type: 'test'
+  ...
+# Subtest: Native v3 laboratory has no Lightweight Charts or TradingView dependency
+ok 60 - Native v3 laboratory has no Lightweight Charts or TradingView dependency
+  ---
+  duration_ms: 0.743739
+  type: 'test'
+  ...
+# Subtest: Native v3 browser module has valid JavaScript syntax
+ok 61 - Native v3 browser module has valid JavaScript syntax
+  ---
+  duration_ms: 40.652733
+  type: 'test'
+  ...
+# Subtest: Native v3 laboratory owns axes, crosshair, Home, Renko and native drawing coordinates
+ok 62 - Native v3 laboratory owns axes, crosshair, Home, Renko and native drawing coordinates
+  ---
+  duration_ms: 0.231438
+  type: 'test'
+  ...
+# Subtest: Renko pips, Renko time and Range pips are separate period modes
+ok 63 - Renko pips, Renko time and Range pips are separate period modes
+  ---
+  duration_ms: 17.105005
+  type: 'test'
+  ...
+# Subtest: renko continuation uses one brick and reversal waits for two bricks
+ok 64 - renko continuation uses one brick and reversal waits for two bricks
+  ---
+  duration_ms: 0.859153
+  type: 'test'
+  ...
+# Subtest: indicator gate accepts declarative built-in spec
+ok 65 - indicator gate accepts declarative built-in spec
+  ---
+  duration_ms: 0.999033
+  type: 'test'
+  ...
+# Subtest: indicator gate rejects arbitrary JavaScript payload
+ok 66 - indicator gate rejects arbitrary JavaScript payload
+  ---
+  duration_ms: 0.301935
+  type: 'test'
+  ...
+# Subtest: share payload round-trips without image storage
+ok 67 - share payload round-trips without image storage
+  ---
+  duration_ms: 3.073564
+  type: 'test'
+  ...
+# Subtest: stateless share link carries compact payload in hash
+ok 68 - stateless share link carries compact payload in hash
+  ---
+  duration_ms: 0.645181
+  type: 'test'
+  ...
+# Subtest: verification labels prioritize simulation modes
+ok 69 - verification labels prioritize simulation modes
+  ---
+  duration_ms: 0.258779
+  type: 'test'
+  ...
+# Subtest: trade summary clearly includes verification and risk reward
+ok 70 - trade summary clearly includes verification and risk reward
+  ---
+  duration_ms: 28.20863
+  type: 'test'
+  ...
+# Subtest: Full Native uses repository-isolated storage and only imports old key as legacy
+ok 71 - Full Native uses repository-isolated storage and only imports old key as legacy
+  ---
+  duration_ms: 1.178543
+  type: 'test'
+  ...
+# Subtest: Full Native sanitizes layout and chart geometry before startup
+ok 72 - Full Native sanitizes layout and chart geometry before startup
+  ---
+  duration_ms: 0.203696
+  type: 'test'
+  ...
+# Subtest: legacy state migrates once into isolated Full Native storage without corrupt viewport values
+ok 73 - legacy state migrates once into isolated Full Native storage without corrupt viewport values
+  ---
+  duration_ms: 4.071956
+  type: 'test'
+  ...
+# Subtest: chart template captures indicators and appearance but not symbol/account/drawings
+ok 74 - chart template captures indicators and appearance but not symbol/account/drawings
+  ---
+  duration_ms: 1.93407
+  type: 'test'
+  ...
+# Subtest: chart template can optionally capture any period and safely restore chart fields
+ok 75 - chart template can optionally capture any period and safely restore chart fields
+  ---
+  duration_ms: 1.583002
+  type: 'test'
+  ...
+# Subtest: workspace captures multi-chart layout separately from chart templates
+ok 76 - workspace captures multi-chart layout separately from chart templates
+  ---
+  duration_ms: 0.654244
+  type: 'test'
+  ...
+# Subtest: all public chart changes route through one app transition controller
+ok 77 - all public chart changes route through one app transition controller
+  ---
+  duration_ms: 1.287807
+  type: 'test'
+  ...
+# Subtest: construction resolution keeps Renko and Range out of Heiken layering
+ok 78 - construction resolution keeps Renko and Range out of Heiken layering
+  ---
+  duration_ms: 1.044271
+  type: 'test'
+  ...
+# Subtest: Renko Time history scales with the selected interval
+ok 79 - Renko Time history scales with the selected interval
+  ---
+  duration_ms: 0.294994
+  type: 'test'
+  ...
+# Subtest: Home is a hard chart refresh path and cancels stale transition frames
+ok 80 - Home is a hard chart refresh path and cancels stale transition frames
+  ---
+  duration_ms: 0.285159
+  type: 'test'
+  ...
+# Subtest: new construction rebuilds do not restore the old logical range
+ok 81 - new construction rebuilds do not restore the old logical range
+  ---
+  duration_ms: 0.25906
+  type: 'test'
+  ...
+# Subtest: construction tabs are navigation-only and every period row restores favourites
+ok 82 - construction tabs are navigation-only and every period row restores favourites
+  ---
+  duration_ms: 0.231799
+  type: 'test'
+  ...
+# Subtest: full native mode renders price indicators directly without compatibility hiding
+ok 83 - full native mode renders price indicators directly without compatibility hiding
+  ---
+  duration_ms: 0.23303
+  type: 'test'
+  ...
+# Subtest: home bar targets give Renko a readable starting density
+ok 84 - home bar targets give Renko a readable starting density
+  ---
+  duration_ms: 0.234783
+  type: 'test'
+  ...
+# Subtest: every this.method() call in app resolves to a class method
+ok 85 - every this.method() call in app resolves to a class method
+  ---
+  duration_ms: 5.356358
+  type: 'test'
+  ...
+# Subtest: known frontend placeholder actions are removed
+ok 86 - known frontend placeholder actions are removed
+  ---
+  duration_ms: 0.320792
+  type: 'test'
+  ...
+# Subtest: share output carries Trade Avata brand and slogan
+ok 87 - share output carries Trade Avata brand and slogan
+  ---
+  duration_ms: 0.265379
+  type: 'test'
+  ...
+# Subtest: frontend trading controls have order, modify and cancel flows
+ok 88 - frontend trading controls have order, modify and cancel flows
+  ---
+  duration_ms: 0.381053
+  type: 'test'
+  ...
+# Subtest: indicator eye controls and oscillator pane workflow are wired
+ok 89 - indicator eye controls and oscillator pane workflow are wired
+  ---
+  duration_ms: 0.393041
+  type: 'test'
+  ...
+# Subtest: market intelligence and controlled AI surfaces are wired
+ok 90 - market intelligence and controlled AI surfaces are wired
+  ---
+  duration_ms: 0.29911
+  type: 'test'
+  ...
+# Subtest: AI voice and read-aloud client is present
+ok 91 - AI voice and read-aloud client is present
+  ---
+  duration_ms: 0.331509
+  type: 'test'
+  ...
+# Subtest: V11.1 correction loads after V11 final layer and is cached
+ok 92 - V11.1 correction loads after V11 final layer and is cached
+  ---
+  duration_ms: 1.397482
+  type: 'test'
+  ...
+# Subtest: guest lockout is OFF by default and admin-controlled
+ok 93 - guest lockout is OFF by default and admin-controlled
+  ---
+  duration_ms: 0.294883
+  type: 'test'
+  ...
+# Subtest: modern authentication includes Google, password reset, confirm password and TA profile
+ok 94 - modern authentication includes Google, password reset, confirm password and TA profile
+  ---
+  duration_ms: 0.244768
+  type: 'test'
+  ...
+# Subtest: candle view scale is independent and Home preserves it
+ok 95 - candle view scale is independent and Home preserves it
+  ---
+  duration_ms: 0.190386
+  type: 'test'
+  ...
+# Subtest: settings transaction fixes OK save, Cancel rollback and manual candle priority
+ok 96 - settings transaction fixes OK save, Cancel rollback and manual candle priority
+  ---
+  duration_ms: 0.199991
+  type: 'test'
+  ...
+# Subtest: mobile menus become safe bottom sheets and premium panel shell is applied
+ok 97 - mobile menus become safe bottom sheets and premium panel shell is applied
+  ---
+  duration_ms: 0.217517
+  type: 'test'
+  ...
+# Subtest: owner lab has real local workspaces and explicit provider-backed surfaces
+ok 98 - owner lab has real local workspaces and explicit provider-backed surfaces
+  ---
+  duration_ms: 0.369216
+  type: 'test'
+  ...
+# Subtest: interactive chart render path reduces pointer-follow latency without changing normal RAF updates
+ok 99 - interactive chart render path reduces pointer-follow latency without changing normal RAF updates
+  ---
+  duration_ms: 0.716367
+  type: 'test'
+  ...
+1..99
+# tests 99
+# suites 0
+# pass 99
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 651.240307
+
+
+> trade-avata-chart@11.1.0 verify
+> node scripts/verify.mjs
+
+Trade Avata v11.1.0 correction verification passed — V11 baseline preserved, correction layer wired, guest lock default off, no external chart renderer.
+
+
+> trade-avata-chart@11.1.0 stress
+> node scripts/stress.mjs
+
+Trade Avata v9.3 stress: 100,000 randomized transition/Renko scenarios passed.
+
+
+> trade-avata-chart@11.1.0 stress:native-v3
+> node scripts/native-v3-stress.mjs
+
+Trade Avata Native v3 stress: 100,000 native geometry/axis/Home/timeframe-anchor scenarios passed.
+
+
+> trade-avata-chart@11.1.0 stress:full-native
+> node scripts/full-native-stress.mjs
+
+Trade Avata Full Native stress passed: 100,000 randomized geometry/transition cases + construction integrity checks.
+
+
+> trade-avata-chart@11.1.0 stress:parity
+> node scripts/final-parity-stress.mjs
+
+Trade Avata final parity stress passed: 1,000 full-native chart constructions with range, axis, Bid/Ask, countdown and oscillator invariants.

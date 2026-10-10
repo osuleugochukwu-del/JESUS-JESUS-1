@@ -1,0 +1,8 @@
+TRADE AVATA SOURCE BASELINE
+===========================
+Repository: osuleugochukwu-del/JESUS-JESUS
+Branch inspected: main
+Git tree SHA inspected: fb0815194417c7c6d4b55e24dbc560b451d0e7ca
+
+This update is designed only for that inspected JESUS-JESUS baseline.
+The installer checks protected original files before copying the additive live-ready layer.

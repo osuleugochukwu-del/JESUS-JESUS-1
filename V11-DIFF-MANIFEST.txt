@@ -1,0 +1,23 @@
+CHANGED FROM PROTECTED V10.2 BASELINE
+assets/styles.css
+index.html
+package.json
+scripts/verify.mjs
+src/ai-client.js
+src/app.js
+src/chart-pane.js
+src/indicators.js
+src/native-chart.js
+src/state.js
+sw.js
+
+NEW FILES
+.github/workflows/deploy.yml
+FINAL-V11-RELEASE.md
+assets/final-upgrade.css
+docs/FINAL-V11-UPGRADE-AUDIT.md
+src/final-upgrade.js
+tests/final-upgrade.test.js
+
+MISSING FROM BASELINE
+None

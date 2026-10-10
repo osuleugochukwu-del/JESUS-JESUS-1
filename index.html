@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#07111c" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://apis.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; connect-src 'self' https: wss:; frame-src https://trade-avata.firebaseapp.com https://accounts.google.com; worker-src 'self' blob:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self' https://id.ctrader.com https://accounts.google.com" />
+  <title>Trade Avata Chart</title>
+  <link rel="icon" href="./public/brand/trade-avata-logo.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/master-recovery.css" />
+  <link rel="stylesheet" href="./assets/final-upgrade.css" />
+  <link rel="stylesheet" href="./assets/v11-correction.css" />
+  <link rel="stylesheet" href="./assets/live-ready-upgrade.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header id="topbar" class="topbar"></header>
+    <aside id="leftbar" class="leftbar"></aside>
+    <main id="workspace" class="workspace">
+      <div id="chart-grid" class="chart-grid layout-1"></div>
+      <section id="bottom-panel" class="bottom-panel collapsed"></section>
+    </main>
+    <aside id="right-rail" class="right-rail"></aside>
+    <aside id="right-panel" class="right-panel"></aside>
+    <nav id="mobile-dock" class="mobile-dock"></nav>
+  </div>
+  <div id="floating-layer"></div>
+  <div id="modal-layer"></div>
+  <div id="toast-layer" class="toast-layer"></div>
+
+  <!-- Production adapters load before the existing Trade Avata application. -->
+  <script src="./src/live-ready-config.js"></script>
+  <script type="module" src="./src/firebase-auth-adapter.js"></script>
+  <script type="module" src="./src/indicator-cloud-adapter.js"></script>
+  <script type="module" src="./src/market-feed-adapter.js"></script>
+  <script type="module" src="./src/ctrader-feed-adapter.js"></script>
+
+  <!-- Existing JESUS-JESUS boot order is preserved exactly. -->
+  <script type="module" src="./src/app.js"></script>
+  <script type="module" src="./src/master-recovery.js"></script>
+  <script type="module" src="./src/final-upgrade.js"></script>
+  <script type="module" src="./src/v11-correction.js"></script>
+
+  <!-- Additive final layer only. -->
+  <script type="module" src="./src/live-ready-upgrade.js"></script>
+</body>
+</html>

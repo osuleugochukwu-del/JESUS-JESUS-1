@@ -1,0 +1,25 @@
+Trade Avata V11.1 correction compared with current LORD-JESUS V11 baseline
+
+ADDED
+.github/workflows/deploy.yml
+assets/v11-correction.css
+src/v11-correction.js
+tests/v11-correction.test.js
+FINAL-V11.1-CORRECTION.md
+FINAL-V11.1-TEST-REPORT.txt
+V11.1-DIFF-MANIFEST.txt
+V11.1-SHA256.txt
+
+CHANGED
+index.html                     load V11.1 CSS/JS after V11
+package.json                   11.0.0 -> 11.1.0
+scripts/verify.mjs             verify correction layer and version
+src/final-upgrade.js           guest policy respects admin enable/hard-lock controls
+src/native-chart.js            bounded immediate interaction repaint path
+src/state.js                   guest lock default OFF; candleViewScale; owner-lab state
+sw.js                          V11.1 cache key and correction assets
+
+PRESERVED
+Existing V11 application shell, chart engine, drawings, indicators, layouts, analytics,
+order ticket, replay, watchlist, themes, V11 round-number work, TA ID/licensing UI,
+and all other baseline files remain in the package.

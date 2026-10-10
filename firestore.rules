@@ -1,0 +1,72 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isOwner() { return signedIn() && request.auth.token.role == 'owner'; }
+
+    // Public TA ID is profile metadata, never an authentication credential.
+    // Normal users may read their own record, but cannot promote themselves,
+    // change their plan, or mint/change a backend-controlled TA ID.
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isOwner());
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.role == 'free'
+        && request.resource.data.plan == 'FREE'
+        && (!('taId' in request.resource.data) || request.resource.data.taId == null);
+      allow update: if isOwner() || (signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['displayName','updatedAt']));
+      allow delete: if isOwner();
+    }
+
+    // TA ID reservations are created only by trusted Admin SDK/backend code.
+    match /taIds/{taId} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    // Entitlements are enforceable backend records. A normal browser cannot grant itself access.
+    match /indicatorEntitlements/{entitlementId} {
+      allow read: if signedIn() && (resource.data.uid == request.auth.uid || isOwner());
+      allow write: if false;
+    }
+
+    // Creator-owned project metadata can sync across devices. Source/package blobs are NOT stored here.
+    match /indicatorProjects/{projectId} {
+      allow read: if signedIn() && (resource.data.ownerUid == request.auth.uid || isOwner());
+      allow create: if signedIn()
+        && request.resource.data.ownerUid == request.auth.uid
+        && request.resource.data.projectId == projectId;
+      allow update: if isOwner() || (signedIn()
+        && resource.data.ownerUid == request.auth.uid
+        && request.resource.data.ownerUid == resource.data.ownerUid
+        && request.resource.data.projectId == resource.data.projectId
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'name','version','targetPlatform','description','parameters','visibility','sharedTaIds','updatedAt','licensingDefaults','draftMetadata'
+        ]));
+      allow delete: if signedIn() && (resource.data.ownerUid == request.auth.uid || isOwner());
+    }
+
+    // Draft version metadata is creator-controlled; successful build artifacts/status remain backend responsibilities.
+    match /indicatorVersions/{versionId} {
+      allow read: if signedIn() && (resource.data.ownerUid == request.auth.uid || isOwner());
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid && request.resource.data.draft == true;
+      allow update: if isOwner() || (signedIn()
+        && resource.data.ownerUid == request.auth.uid
+        && request.resource.data.ownerUid == resource.data.ownerUid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['notes','updatedAt']));
+      allow delete: if signedIn() && (resource.data.ownerUid == request.auth.uid || isOwner());
+    }
+
+    // Broker tokens, OAuth state, build secrets and system sessions are Admin-SDK-only.
+    match /ctraderPrivateSessions/{docId} { allow read, write: if false; }
+    match /ctraderSystemSessions/{docId} { allow read, write: if false; }
+    match /ctraderOAuthStates/{docId} { allow read, write: if false; }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
